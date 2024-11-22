@@ -90,8 +90,8 @@ El script eliminará automáticamente el archivo `.csv` temporal generado durant
 
 ```
 .
-├── crear_productos.sh   # Script principal
-├── README.md            # Este archivo
+├── script.sh   # Script principal
+├── README.md   # Este archivo
 ```
 
 ## Notas
