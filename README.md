@@ -82,7 +82,7 @@ El script eliminará automáticamente el archivo `.csv` temporal generado durant
 ## Funcionamiento del Script
 
 1. **Conversión del archivo**: Utiliza `libreoffice` en modo headless para convertir el archivo `.ods` a `.csv`.
-2. **Procesamiento del archivo CSV**: Usa `tail` y `awk` para omitir las cabeceras (titulos del archivo) y leer cada línea de datos.
+2. **Procesamiento del archivo CSV**: Usa `tail` para omitir las cabeceras (titulos del archivo) y leer cada línea de datos.
 3. **Creación de JSON**: Construye un objeto JSON para cada fila usando `jq`.
 4. **Envío a la API**: Usa `curl` para enviar los datos JSON a la API mediante el método POST.
 
