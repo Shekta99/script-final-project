@@ -34,7 +34,7 @@ git clone https://github.com/Shekta99/script-final-project.git
 Asegúrate de que el script tiene permisos de ejecución:
 
 ```bash
-chmod +x crear_productos.sh
+chmod +x script.sh
 ```
 
 ### Paso 3: Preparar el Archivo de Entrada
@@ -53,7 +53,7 @@ Guarda el archivo con un nombre como `productos.ods`.
 Ejecuta el script proporcionando el archivo `.ods` como parámetro:
 
 ```bash
-./crear_productos.sh productos.ods
+./script.sh productos.ods
 ```
 
 ### Salida Esperada
@@ -97,3 +97,4 @@ El script eliminará automáticamente el archivo `.csv` temporal generado durant
 ## Notas
 
 - Asegúrate de que el archivo `.ods` no tenga filas vacías o valores no válidos en las columnas.
+- Para ver los productos agregados se puede usar este endpoint [https://mock-backend-project.netlify.app/.netlify/functions/getProducts](https://mock-backend-project.netlify.app/.netlify/functions/getProducts)

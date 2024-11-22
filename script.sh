@@ -7,8 +7,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 # Variables utilitarias
-ARCHIVO=$1
-CSV_ARCHIVO="temp.csv"
+ARCHIVO="$1"
 API_URL="https://mock-backend-project.netlify.app/.netlify/functions/createProduct"
 
 # Convertir el archivo de LibreOffice a CSV
@@ -16,6 +15,9 @@ libreoffice --headless --convert-to csv "$ARCHIVO" --outdir . || {
     echo "Error al convertir el archivo a CSV"; 
     exit 1; 
 }
+
+# Determinar el nombre del archivo CSV generado
+CSV_ARCHIVO="${ARCHIVO%.*}.csv"
 
 # Asegurarse de que el archivo CSV se creó correctamente
 if [ ! -f "$CSV_ARCHIVO" ]; then
